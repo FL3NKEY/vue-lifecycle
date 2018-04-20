@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>vue-lifecycle</title>
+
+	<style>
+	.test-component {
+		margin: 30px 0;
+		padding: 20px;
+		background-color: #eee;
+	}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h1>Vue-lifecycle</h1>
+		<p>
+			<button @click="toggle">Toggle test component</button>
+		</p>
+		<test-component
+			v-on-created="onCreated"
+			v-on-mounted="onMounted"
+			v-on-destroyed="onDestroyed"
+			v-if="state">
+		</test-component>
+		<p>
+			<ul>
+				<li v-for="message in messages">
+					<small>{{ message }}</small>
+				</li>
+			</ul>
+		</p>
+	</div>
+
+	<script src="../node_modules/vue/dist/vue.js"></script>
+	<script src="../dist/vue-lifecycle.js"></script>
+
+	<script>
+	Vue.use(VueLifecycle);
+
+	Vue.component('test-component', {
+		template: '<div class="test-component">test component</div>',
+	});
+
+	new Vue({
+		el: '#app',
+		data: {
+			state: true,
+			messages: []
+		},
+		methods: {
+			onCreated(e, d) {
+				this.addMessage('test component created');
+			},
+			onMounted(e, d) {
+				this.addMessage('test component mounted');
+			},
+			onDestroyed(e, d) {
+				this.addMessage('test component destroed');
+			},
+
+			toggle() {
+				this.state = !this.state;
+			},
+
+			addMessage(message) {
+				this.messages.push(message);
+			}
+		}
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "vue-lifecycle",
+  "version": "0.0.1",
+  "description": "A Vue.js lifecycle directives.",
+  "main": "dist/vue-lifecycle.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack",
+    "prod": "cross-env NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FL3NKEY/vue-lifecycle.git"
+  },
+  "keywords": [
+    "vue",
+    "lifecycle",
+    "directive"
+  ],
+  "author": "FL3N",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FL3NKEY/vue-lifecycle/issues"
+  },
+  "homepage": "https://github.com/FL3NKEY/vue-lifecycle#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-stage-2": "^6.24.1",
+    "browser-sync": "^2.23.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^5.1.4",
+    "vue": "^2.5.16",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1"
+  }
+}
