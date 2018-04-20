@@ -23,15 +23,15 @@ Vue.use(VueLifecycle);
 ## Usage
 ### Created
 ``` html
-<some-component v-on-created="someFunction">
+<some-component v-on-created="someFunction"></some-component>
 ```
 
 ### Mounted
 ``` html
-<some-component v-on-mounted="someFunction">
+<some-component v-on-mounted="someFunction"></some-component>
 ```
 
 ### Destroyed
 ``` html
-<some-component v-on-destroyed="someFunction">
+<some-component v-on-destroyed="someFunction"></some-component>
 ```
