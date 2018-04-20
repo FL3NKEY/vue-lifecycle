@@ -30,9 +30,7 @@
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^5.1.4",
     "vue": "^2.5.16",
-    "webpack": "^3.10.0"
-  },
-  "dependencies": {
+    "webpack": "^3.10.0",
     "babel-preset-env": "^1.6.1"
   }
 }
