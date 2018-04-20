@@ -14,7 +14,7 @@ Vue.use(VueLifecycle);
 
 **Via script tag**
 ``` html
-<script src="path/to/vue.js">
+<script src="path/to/vue.js"></script>
 <script src="path/to/node_modules/vue-lifecycle/dist/vue-lifecycle.min.js"></script>
 <script>
 	Vue.use(VueLifecycle);
